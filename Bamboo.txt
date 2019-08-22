@@ -1,0 +1,146 @@
+Setup of Bamboo
+===================
+1 Create t2.medium ubunut 18 AWS instances
+2 Install software-properties-common
+  sudo apt-get update
+  sudo apt-get install -y software-properties-common
+3 Add java ppa repository
+  sudo apt-add-repository ppa:openjdk-r/ppa
+4 Install java8
+  sudo apt-get install -y openjdk-8-jdk
+5 Set the path of java home directory in an environment varibale JAVA_HOME
+  which java
+  readlink -f paste_the_output_of_above_command
+  Copy the path before bin folder
+  JAVA_HOME=paste_the_path_copied_in_above_command
+6 Export JAVA_HOME and add it to PATH varible
+  export JAVA_HOME
+  PATH=$PATH:$JAVA_HOME
+7 Create 2 varibles one for bamboo installation and another for home dir of Bamboo jobs
+  mkdir /usr/local/bamboo-install
+  mkdir /usr/local/bamboo-home
+8 Go to bamboo-install directory and download bamboo
+  cd /usr/local/bamboo-install
+  sudo wget https://www.atlassian.com/software/bamboo/downloads/binary/
+                                                     atlassian-bamboo-6.5.0.tar.gz
+9 Extract the bamboo and cd into it
+  sudo tar -xvf atlassian-bamboo-6.5.0.tar.gz
+  cd atlassian-bamboo-6.5.0
+10 Go into atlasian bamboo/WEB-INF/classes
+   cd atlassian-bamboo/WEB-INF/classes
+11 Open bamboo-init.properties and set the path of bamboo-home
+   sudo vim bamboo-init.properties
+   Uncomment # home path and add
+   home=/usr/local/bamboo-home
+   Save and quit
+12 cd ../../..
+13 cd bin
+14 To start bamboo
+   sudo ./startup.sh
+15 To access the home page of Bamboo
+   Launch nay browser
+   public_ip_of_bambooserver:8085
+16 Search for Bamboo express edition license key on google
+   It will direct to the attlasian site
+   Select Bamboo in the list of products
+   Enter the server id and generate the license key
+   Paste the license key in bamboo
+17 Create first admin user
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
