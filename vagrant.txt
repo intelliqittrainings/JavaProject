@@ -1,0 +1,16 @@
+1 Download and install oracle virtual box
+  https://www.virtualbox.org/wiki/Downloads
+2 Download and install vagrant
+  https://www.vagrantup.com/downloads.html
+3 To check the version of vagrant that is installed
+  vagrant --version
+5 Download the vagrant file sent by shailja
+6 Copy and paste it in an empty folder
+7 Open cmd prompt and change to the folder where the vagrant file is downloaded
+  vagrant up
+
+
+
+
+
+ 

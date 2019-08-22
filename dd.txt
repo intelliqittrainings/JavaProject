@@ -1,0 +1,63 @@
+1 Create a dockerfile
+  vim dockerfile
+  Go into insert mode by pressing i
+
+  FROM jenkins
+  MAINTAINER intelliq
+  USER root
+  RUN apt-get update
+  RUN apt-get install -y git maven
+   
+  Save and quit   Esc : wq enter
+
+2 Create an image from the above dockerfile
+  docker build -t myjenkins .
+
+3 Check if the new image is present
+  docker images
+
+4 Create a container from the above image and check both 8080 and 9090 are mapped
+  docker run -d --name j1 -P myjenkins
+
+5 Open interactive terminal in this container and check who is the default 
+  user and also if git and maven are already installed
+  docker exec -it j1 bash
+  whoami
+  git --version
+  mvn --version
+
+
+ 
+
+5 Check the port mapping
+  docker port t1
+
+
+
+
+  git --version
+  tree
+
+
+
+
+
+
+&&
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  

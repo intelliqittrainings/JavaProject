@@ -1,0 +1,66 @@
+f1 = input("enter the name of source file: ")
+f2 = input("enter the name of des file: ")
+
+def copy_all_data(f1,f2):
+    file1 = open(f1, 'r')
+    file2 = open(f2, 'w')
+    data = file1.read()
+    file2.write(data)
+
+def copy_alternate_line(f1,f2):
+    file1 = open(f1, 'r')
+    file2 = open(f2, 'a')
+    data = file1.readlines()
+    i = 0
+
+    while i < len(data):
+        file2.write(data[i])
+        i = i + 2
+
+copy_alternate_line(f1,f2)
+
+
+
+
+1 Create an ubuntu18 AWS instance
+2 Install docker on it
+3 Install python-pip
+  sudo apt-get install -y python-pip
+4 Install docker-py
+  sudo pip install docker-py
+
+1 Python program for creating 10 tomcat
+  vim sample.py
+  
+  import subprocess
+  i = 1
+  while i <= 10:
+    subprocess.call("docker run -d -P tomcat",shell=True)
+    i += 1
+
+  Save and quit
+
+2 To execute the program
+  python3 sample.py
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
